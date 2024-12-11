@@ -4,21 +4,23 @@ import java.util.Scanner;
 
 public class Menu {
     Scanner sc = new Scanner(System.in);
-    Account account;
 
     public void mainMenu(Account account) {
         Scanner sc = new Scanner(System.in);
         boolean exit = false;
-        int operation = 0;
+        int operation;
+        String menu = """
+                Operations
+                1. Check my Balance
+                2. Make a Deposit
+                3. Withdraw Money
+                4. Exit
+                
+                What would you like to do?
+                """;
 
         while (!exit) {
-            System.out.println("Operations");
-            System.out.println("1. Check my Balance");
-            System.out.println("2. Make a Deposit");
-            System.out.println("3. Withdraw Money");
-            System.out.println("4. Exit\n");
-
-            System.out.print("What would you like to do? ");
+            System.out.print(menu);
             operation = sc.nextInt();
 
             if (operation == 4) {
